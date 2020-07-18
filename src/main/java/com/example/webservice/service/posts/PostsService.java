@@ -56,4 +56,26 @@ public class PostsService {
 
         postsRepository.delete(posts);
     }
+
+    // 게시글 조회
+    public List<PostsListResponseDto> search(String keyword, String type) {
+        // 제목 검색
+        if(type.equals("title")) {
+            return postsRepository.findByTitleContaining(keyword).stream()
+                    .map(PostsListResponseDto::new)
+                    .collect(Collectors.toList());
+        }
+        // 내용 검색
+        else if(type.equals("content")) {
+            return postsRepository.findByContentContaining(keyword).stream()
+                    .map(PostsListResponseDto::new)
+                    .collect(Collectors.toList());
+        }
+        // 제목 + 내용 검색
+        else {
+            return postsRepository.findAllContaining(keyword).stream()
+                    .map(PostsListResponseDto::new)
+                    .collect(Collectors.toList());
+        }
+    }
 }
