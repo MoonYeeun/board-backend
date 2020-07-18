@@ -28,7 +28,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void getPosts() {
+    public void posts_조회() {
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
