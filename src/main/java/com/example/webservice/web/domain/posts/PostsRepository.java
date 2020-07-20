@@ -12,7 +12,7 @@ import java.util.List;
 * JpaRepository<Entitiy 클래스, PK 타입> 상속하면 기본적인 crud 메소드 자동 생성
 * */
 public interface PostsRepository extends JpaRepository<Posts, Long> {
-    @Query("select p from Posts p order by p.id desc ")
+    @Query("select p from Posts p order by p.id asc ")
     List<Posts> findAllDesc();
 
     List<Posts> findByTitleContaining(String keyword); // 제목
