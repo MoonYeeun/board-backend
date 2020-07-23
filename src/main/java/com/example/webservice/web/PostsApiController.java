@@ -1,13 +1,9 @@
 package com.example.webservice.web;
 
 import com.example.webservice.service.posts.PostsService;
-import com.example.webservice.web.dto.PostsListResponseDto;
-import com.example.webservice.web.dto.PostsResponseDto;
-import com.example.webservice.web.dto.PostsSaveRequestsDto;
-import com.example.webservice.web.dto.PostsUpdateRequestDto;
+import com.example.webservice.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RequiredArgsConstructor

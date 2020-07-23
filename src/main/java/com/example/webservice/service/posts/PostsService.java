@@ -1,11 +1,9 @@
 package com.example.webservice.service.posts;
 
+import com.example.webservice.web.domain.files.FilesRepository;
 import com.example.webservice.web.domain.posts.Posts;
 import com.example.webservice.web.domain.posts.PostsRepository;
-import com.example.webservice.web.dto.PostsListResponseDto;
-import com.example.webservice.web.dto.PostsResponseDto;
-import com.example.webservice.web.dto.PostsSaveRequestsDto;
-import com.example.webservice.web.dto.PostsUpdateRequestDto;
+import com.example.webservice.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +15,7 @@ import java.util.stream.Collectors;
 @Service
 public class PostsService {
     private final PostsRepository postsRepository;
+    private final FilesRepository filesRepository;
 
     // 게시글 등록
     @Transactional
