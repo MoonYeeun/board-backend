@@ -8,9 +8,11 @@ import lombok.Setter;
 public class FilesResponseDto {
     private Long id;
     private String fileOriName;
+    private String fileName;
 
     public FilesResponseDto(UploadFiles entity) {
         this.id = entity.getId();
         this.fileOriName = entity.getFileOriName();
+        this.fileName = entity.getFileName();
     }
 }
