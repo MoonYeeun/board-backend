@@ -9,10 +9,12 @@ public class FilesResponseDto {
     private Long id;
     private String fileOriName;
     private String fileName;
+    private String fileType;
 
     public FilesResponseDto(UploadFiles entity) {
         this.id = entity.getId();
         this.fileOriName = entity.getFileOriName();
         this.fileName = entity.getFileName();
+        this.fileType = entity.getFileType();
     }
 }
